@@ -1,0 +1,127 @@
+.choose {
+
+  transition: all .3s ease-in-out;
+  &--hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 1rem;
+  }
+
+  &__container {
+    padding: 2rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: $red;
+    text-transform: uppercase;
+  }
+
+  &__label {
+    font-size: 1.6rem;
+    color: $blue;
+  }
+
+  &__list {
+    margin: 3rem 0;
+  }
+
+  &__singleRole {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 0.5rem 0;
+    margin: .3rem 0;
+    color: $blue;
+    position: relative;
+    transition: all .3s ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background-color: $red;
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+      padding-left: 1rem;
+
+      &::before {
+        width: 3px;
+      }
+
+      .choose__button {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: #fff;
+    color: $red;
+    border: none;
+    float: right;
+    font-size: 2rem;
+    transition: all .3s ease-in-out;
+    padding: 0 5px;
+
+    &--delete {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    &--proceed {
+      float: none;
+      min-width: 250px;
+      padding: .5rem 1rem;
+      border: 2px solid $red;
+      margin-top: 3rem;
+
+      &:hover {
+        background-color: $red;
+        color: #fff;
+      }
+    }
+
+    &--add {
+      float: none;
+      color: $blue;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__addRoleContainer {
+    display: block;
+  }
+
+  &__input {
+    height: 18px;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

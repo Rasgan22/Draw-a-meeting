@@ -1,0 +1,16 @@
+{
+  "name": "Draw",
+  "version": "1.0.0",
+  "description": "Draw a meeting",
+  "author": "Przemek Lewicki",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7"
+  }
+}

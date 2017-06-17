@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0">
+    <title>Draw a meeting</title>
+    <link rel="stylesheet" href="css/main.css">
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper wrapper">
+        <h1 class="header__title">Draw a meeting!</h1>
+        <p class="header__desc">Choose a role or add your own. Add club members. Draw a role for each one of them!</p>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <section class="choose">
+        <div class="choose__wrapper wrapper">
+          <div class="choose__container">
+            <h2 class="choose__title">Choose or add a role</h2>
+            <div class="choose__content">
+
+              <div class="choose__section">
+                <h3 class="choose__label">Roles list:</h3>
+                  <ul class="choose__list" data-type="roles"></ul>
+              </div>
+
+              <div class="choose__section">
+                <h3 class="choose__label">Add your own!</h3>
+                <span class="choose__addRoleContainer">
+                  <input class="choose__input" data-type="roles" type="text">
+                  <button class="choose__button choose__button--add icon-plus" data-type="roles"></button>
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="choose__container">
+            <h2 class="choose__title">Add your club members</h2>
+            <div class="choose__content">
+
+              <div class="choose__section">
+                <h3 class="choose__label">Club members list:</h3>
+                  <ul class="choose__list" data-type="members">
+
+                  </ul>
+              </div>
+
+              <div class="choose__section">
+                <h3 class="choose__label">Add a member!</h3>
+                <span class="choose__addRoleContainer">
+                  <input class="choose__input" data-type="members" type="text">
+                  <button class="choose__button choose__button--add icon-plus" data-type="members"></button>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <button class="choose__button choose__button--proceed">Draw roles</button>
+
+      </section>
+
+      <section class="draw draw--hide">
+
+        <h2 class="draw__title">Draw!</h2>
+        <div class="draw__wrapper wrapper">
+          <div class="draw__panel">
+
+            <div class="draw__container">
+              <h4 class="draw__role">Name of role: <span class="draw__roleName"></span></h4>
+              <p class="draw__name">Name: </p>
+            </div>
+            <button class="draw__button">Draw a role!</button>
+          </div>
+
+          <ul class="draw__output"></ul>
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <footer class="footer">
+      Tutaj pewnie pojawi sie link do FB Kontest, i mój mail
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+      new Core();
+    </script>
+  </body>
+</html>
